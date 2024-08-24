@@ -24,6 +24,7 @@ import { GetTasks, GetTasksByProjectId } from "@/app/api/TasksApi";
 import EditTaskDialog from "../../tasks/editTaskDialog";
 import { getStatusLabel } from "@/app/helpers/status.";
 import { getPriorityLabel } from "@/app/helpers/priority.";
+import Header from "../../header";
 
 const poppins = Poppins({
     subsets: ["latin"],
