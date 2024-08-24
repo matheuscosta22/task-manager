@@ -27,7 +27,15 @@ export class FindTasksByProjectController {
 
     const task = await this.tasksService.findByProjectId(id, page, perPage);
     if (!task) {
-      return response.status(404).send({ error: 'Task not found' });
+      return response.status(200).send({
+        data: [],
+        meta: {
+          total: 0,
+          page,
+          perPage,
+          totalPages: 0,
+        },
+      });
     }
 
     return response.status(200).send(task);
