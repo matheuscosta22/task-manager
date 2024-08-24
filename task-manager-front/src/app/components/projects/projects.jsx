@@ -126,6 +126,12 @@ export default function Projects() {
                         >
                             Cadastrar Projeto
                         </Button>
+                        {Boolean(openCreateProject) && (
+                            <CreateProjectDialog
+                                handleClose={handleCreateClose}
+                                openCreateDialog={() => Boolean(openCreateProject)}
+                            />
+                        )}
                     </Box>
                 )}
                 {!emptyProjects && !loading && (

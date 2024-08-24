@@ -125,6 +125,12 @@ export default function Tasks() {
                         >
                             Cadastrar Tarefa
                         </Button>
+                        {Boolean(openCreateTask) && (
+                            <CreateTaskDialog
+                                handleClose={handleCreateClose}
+                                openCreateDialog={() => Boolean(openCreateTask)}
+                            />
+                        )}
                     </Box>
                 )}
                 {!emptyTasks && !loading && (
