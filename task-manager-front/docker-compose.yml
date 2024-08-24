@@ -1,0 +1,7 @@
+services:
+  task-manager-front:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production # Set for production build 
